@@ -1,0 +1,12 @@
+delete me after
+you need to uhh write ur project under here C:\Users\konha\Desktop\Learning\Whalien
+
+before u code
+1. open command prompt
+2. type in: cd desktop 
+3. type in: cd learning
+4. type in: cd Whalien
+5. type in: git pull
+code lmfao
+6. type in: git commit add .
+7. type in: git push
