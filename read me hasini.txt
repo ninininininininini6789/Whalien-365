@@ -8,5 +8,6 @@ before u code
 4. type in: cd Whalien
 5. type in: git pull
 code lmfao
-6. type in: git commit add .
-7. type in: git push
+6. type in: git add .
+6.5 type in: git commit -m "whatever u wanna call this commit"
+7. type in: git push -u origin main
