@@ -24,10 +24,11 @@ def to_do_list():
             print(f"{task} has been added to the list")
         
         elif choice == "3":
-            task_num = int(input("Enter the task number to remove:"))
+            task_num = int(input("Enter the task number to mark as done:"))
             if 0 < task_num <= len(tasks):
                 removed_tasks = tasks.pop(task_num - 1)
-                print(f"Task '{removed_tasks}' removed.")
+                print(f"Task '{removed_tasks}' marked as done!")
+                choice=input("Did this task take longer than you planned for it to take?")
             else:
                 print("Invalid task number, please type a number greater than 0")
         
