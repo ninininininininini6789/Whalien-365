@@ -10,6 +10,19 @@ body {
     height: 100vh;
 }
 
+/* Top Nav */
+.topnav {
+    background-color: #a4ffa7;
+    overflow: hidden;
+}
+.topnav a {
+    float: left;
+    color: #009e05;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: wavy underline;
+}
+
 /* Title */
 h1 {
     font-weight: 600;
