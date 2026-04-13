@@ -1,56 +1,89 @@
-/* style.css*/
+/* Base */
 body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #f7f6f3;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-family: sans-serif;
-    line-height: 1.5;
-    min-height: 100vh;
-    background: rgb(204, 93, 255);
-    flex-direction: column;
-    margin: 0;
+    height: 100vh;
 }
 
-.main {
-    background-color: rgb(221, 148, 255);
-    border-radius: 15px;
-    box-shadow: 0 0 20px;
-    padding: 10px 20px;
-    transition: transform 0.2s;
-    width: 500px;
-    height: 400px;
+/* Title */
+h1 {
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #2f2f2f;
+}
+
+/* App container */
+.app-container {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
     text-align: center;
+    width: 320px;
 }
 
+/* Mode buttons */
+.mode-switch {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.mode-switch button {
+    flex: 1;
+    margin: 0 5px;
+    padding: 8px;
+    border: none;
+    border-radius: 8px;
+    background: #eee;
+    cursor: pointer;
+    font-size: 13px;
+    transition: 0.2s;
+}
+
+.mode-switch button.active {
+    background: #4caf50;
+    color: white;
+}
+
+/* Timer */
 .timer-circle {
-    border-radius: 50%;
     width: 200px;
     height: 200px;
     margin: 20px auto;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 25px;
-    color: black;
-    border: 8px solid black;
+    font-size: 40px;
+    font-weight: 600;
+    background: #f0fdf4;
+    border: 8px solid #4caf50;
+    color: #2f2f2f;
 }
 
+/* Buttons */
 .control-buttons {
-    margin-top: 75px;
     display: flex;
-    justify-content: space-evenly;
+    gap: 10px;
 }
 
 .control-buttons button {
-    background-color: rgb(176, 91, 255);
-    color: white;
+    flex: 1;
+    padding: 10px;
     border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 10px;
+    background: #2f2f2f;
+    color: white;
     cursor: pointer;
+    transition: 0.2s;
 }
 
 .control-buttons button:hover {
-    background-color:rgb(221, 148, 255);
-    transition: background-colour 0.3s;
+    background: #444;
 }
