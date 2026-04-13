@@ -1,62 +1,56 @@
-*{
-    margin: 8;
-    padding: 0;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
+/* style.css*/
 body {
-    display: grid;;
-    place-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    line-height: 1.5;
     min-height: 100vh;
+    background: rgb(204, 93, 255);
+    flex-direction: column;
+    margin: 0;
 }
 
-.data-percent {
-    --angle: 360deg;
-    --colour: rgb(155, 0, 202);
+.main {
+    background-color: rgb(221, 148, 255);
+    border-radius: 15px;
+    box-shadow: 0 0 20px;
+    padding: 10px 20px;
+    transition: transform 0.2s;
+    width: 500px;
+    height: 400px;
+    text-align: center;
+}
 
-    display: grid;
-    place-items: center;
-
-    position: relative;
-    z-index: 100;
-
+.timer-circle {
+    border-radius: 50%;
+    width: 200px;
     height: 200px;
-    aspect-ratio: 1/ 1;
-    border-radius: 50%;
-    background: conic-gradient(var(--colour) 0, var(--colour) var(--angle), white var(--angle), white 360deg);
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    color: black;
+    border: 8px solid black;
 }
 
-.data-percent::after {
-    content: '';
-    position: absolute;
-    z-index: -1;
-    height: 90%;
-    width: 90%;
-    top: 5%;
-    left: 5%;
-    border-radius: 50%;
-    background: rgb(238, 179, 255);
+.control-buttons {
+    margin-top: 75px;
+    display: flex;
+    justify-content: space-evenly;
 }
 
-#timer {
-    font-size: 2rem;
-    align-self: flex-end;
-}
-
-#mode {
-    align-self: flex-start;
-}
-
-.d-flex {display:flex}
-.flex-column {flex-direction: column;}
-.align-items-center {align-items: center;}
-.justify-content-center {justify-content: center;}
-.gap-10 {gap: 10px}
-.d-none {display: none}
-
-button {
-    outline: none;
+.control-buttons button {
+    background-color: rgb(176, 91, 255);
+    color: white;
     border: none;
-    background: transparent;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.control-buttons button:hover {
+    background-color:rgb(221, 148, 255);
+    transition: background-colour 0.3s;
 }
