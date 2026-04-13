@@ -20,6 +20,8 @@ function countdown(pTime){
             clearInterval(countdownInterval)
             if (numberOfWorkIntervals > 0) {
                 switchMode();
+            } else {
+                updateCountdown(pTime)
             }
         } else {
             //update countdown
@@ -38,7 +40,7 @@ function updateCountdown(pTime) {
         modeEl.innerText = `END: 0`;
     } else {
         //calculate angle
-        let angle = pTime / currentTime * 360 + 'deg';
+        let angle = pTime / (currentTime == "Work" ? workTime : restTime)* 360 + 'deg';
         if (pTime == 0) {
             angle = '360deg';
         }
@@ -59,5 +61,32 @@ function switchMode() {
     numberOfWorkIntervals = currentMode == "Work" ? numberOfWorkIntervals - 1 : numberOfWorkIntervals;
     currentTime = currentMode == "Work" ? workTime : restTime
     updateCountdown(currentTime)
+    countdown(currentTime);
+}
+
+function play() {
+    clearInterval(countdownInterval);
+    countdown(currentTime)
+    document.querySelectorAll('.play')[0].classList.add('d-none')
+    document.querySelectorAll('.pause')[0].classList.remove('d-none')
+}
+function pause() {
+    clearInterval(countdownInterval);
+    let [minutes, seconds] = timer.innerText.split("")
+    console.log(minutes, seconds);
+    currentTime = ((minutes * 60) + (seconds * 1)) * 1000;
+    document.querySelectorAll('.play')[0].classList.remove('d-none')
+    document.querySelectorAll('.pause')[0].classList.add('d-none')
+}
+function reset() {
+    clearInterval(countdownInterval);
+    currentMode = "Work";
+    currentTime = workTime;
+    numberOfWorkIntervals = 2;
+    
+    document.querySelectorAll('.play')[0].classList.add('d-none')
+    document.querySelectorAll('.pause')[0].classList.remove('d-none')
+    
+    updateCountdown(currentTime);
     countdown(currentTime);
 }
