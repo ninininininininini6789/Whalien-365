@@ -1,4 +1,4 @@
-/* Base */
+
 body {
     margin: 0;
     font-family: "Mali", sans-serif;
@@ -10,7 +10,7 @@ body {
     height: 100vh;
 }
 
-/* Top Nav */
+
 nav {
   background-color: #dcffdf; /* soft green instead of bright */
   padding: 10px 20px;
@@ -47,14 +47,14 @@ nav a:hover {
   background-color: #dcedc8;
 }
 
-/* Title */
+
 h1 {
     font-weight: 600;
     margin-bottom: 20px;
     color: #2f2f2f;
 }
 
-/* App container */
+
 .app-container {
     background: white;
     padding: 30px;
@@ -64,7 +64,7 @@ h1 {
     width: 320px;
 }
 
-/* Mode buttons */
+
 .mode-switch {
     display: flex;
     justify-content: space-between;
@@ -88,7 +88,7 @@ h1 {
     color: white;
 }
 
-/* Timer */
+
 .timer-circle {
     width: 200px;
     height: 200px;
@@ -104,7 +104,7 @@ h1 {
     color: #2f2f2f;
 }
 
-/* Buttons */
+
 .control-buttons {
     display: flex;
     gap: 10px;
@@ -125,7 +125,7 @@ h1 {
     background: #444;
 }
 
-/* FOOTER */
+
 .footer {
     margin-top: auto;
     padding: 20px;
