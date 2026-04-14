@@ -46,7 +46,7 @@ nav a:hover {
   background-color: #dcedc8;
 }
 
-/* MAIN CONTENT (card like pomodoro) */
+
 .text-container {
     background: white;
     padding: 40px;
@@ -54,7 +54,9 @@ nav a:hover {
     margin: 60px auto;
     max-width: 600px;
     text-align: center;
+
     box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+
 }
 
 .text-container p {
@@ -62,14 +64,15 @@ nav a:hover {
     line-height: 1.6;
 }
 
-/* TEXT */
+
+
 main p {
     margin: 10px 0;
     color: #444;
     line-height: 1.6;
 }
 
-/* FOOTER */
+
 .footer {
     margin-top: auto;
     padding: 20px;
@@ -77,3 +80,4 @@ main p {
     color: #666;
     font-size: 0.9em;
 }
+
