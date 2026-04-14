@@ -64,20 +64,21 @@ nav a:hover {
 
 /* TEXT */
 main p {
-  margin: 10px 0;
-  color: #444;
-  line-height: 1.6;
+    margin: 10px 0;
+    color: #444;
+    line-height: 1.6;
 }
 
 /* FOOTER */
 footer {
-  background-color: #f0fdf4;
-  margin-top: 3em;
-  padding: 12px;
-  font-weight: 200;
-  font-style: italic;
-  font-size: 0.9em;
-  color: #444;
-  text-align: center;
+    min-height: 50px;
+    background-color: #f0fdf4;
+     margin-top: 3em;
+    padding: 12px;
+    font-weight: 200;
+    font-style: italic;
+    font-size: 0.9em;
+    color: #444;
+    text-align: center;
   
 }
