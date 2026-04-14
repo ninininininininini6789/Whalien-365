@@ -128,9 +128,12 @@ h1 {
 /* FOOTER */
 footer {
   background-color: #f0fdf4;
+  margin-top: 5em;
+  padding: 12px;
+  font-weight: 200;
+  font-style: italic;
+  font-size: 0.9em;
   color: #444;
   text-align: center;
-  padding: 12px;
-  margin-top: auto;
-  font-size: 0.9em;
+  
 }
