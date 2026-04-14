@@ -4,27 +4,38 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tasks</title> 
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styletasks.css" />
 </head>
+
 <body>
-    <nav class="nav">
+    <nav>
         <a href="frontpage.html">Home</a>
         <a href="index.html">Pomodoro Timer</a>
-        <a href="tasks.html" class="active">Tasks</a>
+        <a href="tasks.html">Tasks</a>
     </nav>
 
-    <h1>Tasks</h1>
+    <h1>Tasks 🌱</h1>
+
     <div class="app-container">
         <h2>Your Tasks</h2>
 
-        <input id="taskInput" placeholder="Add a task">
-        <button onclick="addTask()">Add</button>
+        <div class="task-input">
+            <input 
+                id="taskInput" 
+                placeholder="Add a task... ✨"
+                onkeypress="if(event.key==='Enter') addTask()"
+            >
+            <button onclick="addTask()">Add</button>
+        </div>
 
         <ul id="taskList"></ul>
     </div>
 
-    <footer>
+    <footer class="footer">
         <p>made by panininini ( ⸝⸝•ᴗ•⸝⸝ )੭⁾⁾ for hack club sleepover!!</p>
     </footer>
+
+    <!-- IMPORTANT: load JS -->
+    <script src="index.js"></script>
 </body>
 </html>
