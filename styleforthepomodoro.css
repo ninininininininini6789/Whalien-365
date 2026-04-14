@@ -11,16 +11,40 @@ body {
 }
 
 /* Top Nav */
-.topnav {
-    background-color: #a4ffa7;
-    overflow: hidden;
+nav {
+  background-color: #dcffdf; /* soft green instead of bright */
+  padding: 10px 20px;
 }
-.topnav a {
-    float: left;
-    color: #009e05;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin-right: 15px;
+    font-weight: 500;
+}
+
+nav li.title {
+    font-size: 1.4em;
+    color: #2f2f2f;
+    margin-right: auto;
+}
+
+nav a {
+  color: #2f2f2f;
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+
+nav a:hover {
+  background-color: #dcedc8;
 }
 
 /* Title */
