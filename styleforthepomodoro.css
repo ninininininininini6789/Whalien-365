@@ -124,3 +124,13 @@ h1 {
 .control-buttons button:hover {
     background: #444;
 }
+
+/* FOOTER */
+footer {
+  background-color: #f0fdf4;
+  color: #444;
+  text-align: center;
+  padding: 12px;
+  margin-top: auto;
+  font-size: 0.9em;
+}
