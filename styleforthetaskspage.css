@@ -1,26 +1,26 @@
-/*topbarthing*/
+/* topbar thing */
 nav {
-  background-color: #dcffdf; /* soft green instead of bright */
+  background-color: #dcffdf; /* soft green */
   padding: 10px 20px;
 }
 
 nav ul {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    margin: 0;
-    padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
 nav li {
-    margin-right: 15px;
-    font-weight: 500;
+  margin-right: 15px;
+  font-weight: 500;
 }
 
 nav li.title {
-    font-size: 1.4em;
-    color: #2f2f2f;
-    margin-right: auto;
+  font-size: 1.4em;
+  color: #2f2f2f;
+  margin-right: auto;
 }
 
 nav a {
@@ -28,24 +28,82 @@ nav a {
   text-decoration: none;
   padding: 6px 10px;
   border-radius: 6px;
-  transition: 0.2s;
+  transition: background-color 0.2s;
 }
 
 nav a:hover {
   background-color: #dcedc8;
 }
 
-/* FOOTER */
-footer {
-    min-height: 50px;
-    background-color: #f0fdf4;
-     margin-top: 3em;
-    padding: 12px;
-    font-weight: 200;
-    font-style: italic;
-    font-size: 0.9em;
-    color: #444;
-    text-align: center;
-  
+/* Task input button */
+.task-input button {
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: #4caf50;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s;
 }
+
+.task-input button:hover {
+  background: #45a049;
+}
+
+/* Task list styles */
+#taskList {
+  list-style: none;
+  padding: 20px; /* added padding for spacing */
+  margin: 0;
+}
+
+#taskList li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f0fdf4;
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 10px;
+  transition: transform 0.2s, background 0.2s;
+}
+
+/* Hover effect for task items */
+#taskList li:hover {
+  transform: translateY(-1px);
+  background-color: #e0f7e9; /* optional: subtle background change */
+}
+
+/* Task text */
+#taskList span {
+  cursor: pointer;
+}
+
+/* Completed task style */
+.done {
+  text-decoration: line-through;
+  color: #888;
+}
+
+/* Delete button styles */
+#taskList button {
+  border: none;
+  background: transparent;
+  color: #888;
+  cursor: pointer;
+  font-size: 16px;
+  transition: color 0.2s;
+}
+
+#taskList button:hover {
+  color: red;
+}
+
+/* Footer styling */
+.footer {
+  margin-top: 20px;
+  padding: 20px;
+  text-align: center;
+  color: #666;
+  font-size: 0.9em;
 }
