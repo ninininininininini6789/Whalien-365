@@ -1,6 +1,6 @@
 let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+let activeTaskIndex = JSON.parse(localStorage.getItem("activeTaskIndex"));
 
-// Load tasks when page opens
 window.onload = function () {
     renderTasks();
 };
@@ -9,11 +9,12 @@ function addTask() {
     const input = document.getElementById("taskInput");
     const text = input.value.trim();
 
-    if (text === "") return;
+    if (!text) return;
 
     tasks.push({
         text: text,
-        completed: false
+        completed: false,
+        timeSpent: null
     });
 
     input.value = "";
@@ -21,14 +22,29 @@ function addTask() {
     renderTasks();
 }
 
-function toggleTask(index) {
-    tasks[index].completed = !tasks[index].completed;
-    saveTasks();
+function selectTask(index) {
+    activeTaskIndex = index;
+
+    localStorage.setItem("activeTaskIndex", JSON.stringify(index));
+    localStorage.setItem("taskStartTime", Date.now());
+
     renderTasks();
 }
 
 function deleteTask(index) {
+    if (activeTaskIndex === index) {
+        localStorage.removeItem("activeTaskIndex");
+        localStorage.removeItem("taskStartTime");
+        activeTaskIndex = null;
+    }
+
     tasks.splice(index, 1);
+
+    if (activeTaskIndex !== null && index < activeTaskIndex) {
+        activeTaskIndex--;
+        localStorage.setItem("activeTaskIndex", JSON.stringify(activeTaskIndex));
+    }
+
     saveTasks();
     renderTasks();
 }
@@ -45,9 +61,14 @@ function renderTasks() {
         const li = document.createElement("li");
 
         li.innerHTML = `
-            <span onclick="toggleTask(${index})" class="${task.completed ? 'done' : ''}">
+            <span 
+                onclick="selectTask(${index})"
+                class="${task.completed ? 'done' : ''} ${activeTaskIndex === index ? 'active-task' : ''}"
+            >
                 ${task.completed ? "✔ " : ""}${task.text}
+                ${task.timeSpent ? `<br><small>⏱ ${task.timeSpent}</small>` : ""}
             </span>
+
             <button onclick="deleteTask(${index})">✕</button>
         `;
 
