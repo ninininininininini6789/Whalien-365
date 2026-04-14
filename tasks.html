@@ -7,13 +7,20 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <nav class="topnav">
+    <nav class="nav">
         <a href="frontpage.html">Home</a>
         <a href="index.html">Pomodoro Timer</a>
         <a href="tasks.html" class="active">Tasks</a>
     </nav>
 
     <h1>Tasks</h1>
-    <p>Task management features will go here.</p>
+    <div class="app-container">
+        <h2>Your Tasks</h2>
+
+        <input id="taskInput" placeholder="Add a task">
+        <button onclick="addTask()">Add</button>
+
+        <ul id="taskList"></ul>
+    </div>
 </body>
 </html>
