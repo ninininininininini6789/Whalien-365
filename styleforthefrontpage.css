@@ -47,7 +47,7 @@ nav a:hover {
 }
 
 /* MAIN CONTENT (card like pomodoro) */
-.app-container {
+.text-container {
     font-family: "Mali", cursive;
     text-align: center;
     font-weight: 700;
@@ -64,16 +64,16 @@ nav a:hover {
 
 /* TEXT */
 main p {
-    margin: 10px 0;
-    color: #444;
-    line-height: 1.6;
+  margin: 10px 0;
+  color: #444;
+  line-height: 1.6;
 }
 
 /* FOOTER */
 footer {
     min-height: 50px;
     background-color: #f0fdf4;
-     margin-top: 3em;
+    margin-top: 3em;
     padding: 12px;
     font-weight: 200;
     font-style: italic;
