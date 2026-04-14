@@ -47,7 +47,7 @@ nav a:hover {
 }
 
 /* MAIN CONTENT (card like pomodoro) */
-.app-container {
+.text-container {
     font-family: "Mali", cursive;
     text-align: center;
     font-weight: 700;
@@ -64,21 +64,18 @@ nav a:hover {
 
 /* TEXT */
 main p {
-    margin: 10px 0;
-    color: #444;
-    line-height: 1.6;
+  margin: 10px 0;
+  color: #444;
+  line-height: 1.6;
 }
 
 /* FOOTER */
-footer {
-    min-height: 50px;
-    background-color: #f0fdf4;
-     margin-top: 3em;
-    padding: 12px;
-    font-weight: 200;
-    font-style: italic;
-    font-size: 0.9em;
-    color: #444;
-    text-align: center;
-  
+.footer {
+    border: 2px solid #f0fdf4; 
+    padding: 20px;
+    margin: 40px auto; 
+    font-family: Arial, sans-serif; 
+    text-align: center; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
 }
+
